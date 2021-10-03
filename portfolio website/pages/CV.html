@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <!--meta tags being used for SEO-->
+    <meta name="description" content="course work 3">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="sushil phuyal">
+    <!--title displays on top of tab-->
+    <title>Home | sushilphuyal</title>
+    <link rel="stylesheet" href="../css/style.css"> <!--this is done to connect css with this html -->
+</head>
+<body style="background-color: #00ead3;">    
+    <nav class="navbar"> <!--class defined for nav bar-->
+        <div>
+            <a href="../index.html"><img class="logo" src="../images/logo.png"></a> <!--input of logo-->
+        </div>
+        <ul class="nav-list">
+            <li class="list-item">
+                <a href="../index.html">Home</a>  <!--items of navigation bar-->
+            </li>
+            <li class="list-item">
+                <a href="CV.html">CV</a> <!--items of navigation bar-->
+            </li>
+            <li class="list-item">
+                <a href="Blog.html">Blog</a> <!--items of navigation bar-->
+            </li>
+            <li class="list-item">
+                <a href="Research.html">Research</a> <!--items of navigation bar-->
+            </li>
+            <li class="list-item">
+                <a href="contact.html">Contact us</a> <!--items of navigation bar-->
+            </li>
+        </ul>
+    </nav>
+
+    <table class="CV" width="0px" height="800px" align="center"> <!--table created on cv page-->
+        <tr>
+            <td width="200px" bgcolor="#005f99" style="color: white; padding: 20px;"> <!--used inline css for defining property of a column-->
+                <img src="../images/mypic.jpg" style="border-radius: 100%;">  <!--we do radius sizing for making the picture circular-->
+                <h1>Personal details</h1><hr>
+                <p><b>Name:</b> <br>
+                    Sushil Phuyal <br><br>
+
+                    <b>Address:</b> <br>
+                    Dhulabari, Jhapa, Nepal <br><br>
+
+                    <b>Phone number:</b><br>
+                    +977-9814953332 <br><br>
+
+                    <b>Driving License:</b><br>
+                    Bike, car <br><br></p>
+
+                    <h2>My Hobbies</h2><hr><br>
+                    <p>penetration testing</p>
+                    <p>web development</p>
+                    <p>chess</p>
+                    <p>travelling</p>
+                    <p>bug bounty</p><br><br>
+
+                    <h2>Languages</h2><hr><br>
+                    <p><b>English:</b> Fluent </p>
+                    <p><b>Nepali:</b> Native speaker</p>
+                    <p><b>Hindi:</b> Fluent</p><br><br>
+            </td>
+            <td class="cvwala" width="1200px" bgcolor="#00ead3" style="padding: 10px;"> <!--separeated class for display of details-->
+            <h1>Sushil Phuyal</h1><hr>
+            <p>I am an independent security researcher from Nepal at HackerOne. I have experience in learning about security and cyber-attack scenario. Also, I am good at motivation. I love to talk with you about our uniqueness. I am a weird guy who loves everything between security and vulnerabilities. I love to learn about new attack surfaces and exploits. My main specification is IoT penetration testing. </p><br><br>
+
+            <style>    .cvwala h2{color: red;   }  /*internal css dine for cvwala class*/
+                        .cvwala h1{ color: red;}
+                        .cvwala img{
+                            height: 300px;
+                            width: 700px;
+                            
+                        }
+            </style>
+            <h2>Education and Qualifications</h2><hr><br> <!--br tag used for spacing and hr for line sepertations-->
+            <h4><b>London Metropolitan University</b></h4>
+            <p>I am a student at London Metropolitan University. And I have enrolled in my college as Islington College at Kamalpokhari, Kathmandu, Nepal. My main specification is Bsc. (Hons) Networking and IT security. I am here since 2021 till date. </p><br>
+            <h4><b>Dhulabari High School</b></h4>
+            <p>I completed my +2 from Dhulabari High school with a major in science and scored a 3.14 GPA on finals. I was here since 2018 - 2020. </p><br>
+            <h4><b>St. Xavier's School</b></h4>
+            <p>I completed my school level education from St. Xavier's School Deonia. i passed my SEE at 2017.</p><br><br>
+
+            <h2>Certifications</h2><hr><br>
+            
+            <div id="slider"> <!--images of certifications which slides on each 2 seconds-->
+            <img src="../images/1.png">
+            <img src="../images/2.png">
+            <img src="../images/3.png">
+            
+
+            </div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        var sliderContainer = document.getElementById("slider");   /*fecting of data with internal javascript*/
+        var images = sliderContainer.children;     
+      
+        var max = images.length;                   
+        var index = max;
+        function slider() {                                           /*logic written for sliding*/
+            index = index <= 0 ? max - 1: --index;
+            console.log(index)
+            images[index].style.display = "none";
+            if(index == 0) {
+                for(var i = 0; i < max; i++) {                         /*i++ makes it on auto encriment*/
+                 images[i].style.display = "block";
+            }
+        }
+        } 
+        setInterval(slider, 2000);                      /*2000 makes it slide on 2 seconds*/
+    </script>
+</body>
+</html>                                                               <!--end of html section-->
