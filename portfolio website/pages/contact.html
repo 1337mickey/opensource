@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <!--meta tags being used for SEO-->
+    <meta name="description" content="course work 3">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="sushil phuyal">
+    <!--title displays on top of tab-->
+    <title>Home | sushilphuyal</title>
+    <link rel="stylesheet" href="../css/style.css"> <!--this is done to connect css with this html -->
+</head>
+<body style="background-color: #00ead3; overflow: hidden;">    <!--overflow hidden hides the scroolbar and prevent it to move-->
+    <script type="text/javascript" src="../js/main.js"></script>  <!--external javascript connected-->
+    <nav class="navbar"> <!--class defined for nav bar-->
+        <div>
+            <a href="../index.html"><img class="logo" src="../images/logo.png"></a> <!--input of logo-->
+        </div>
+        <ul class="nav-list">
+            <li class="list-item">
+                <a href="../index.html">Home</a>  <!--items of navigation bar-->
+            </li>
+            <li class="list-item">
+                <a href="CV.html">CV</a> <!--items of navigation bar-->
+            </li>
+            <li class="list-item">
+                <a href="Blog.html">Blog</a> <!--items of navigation bar-->
+            </li>
+            <li class="list-item">
+                <a href="Research.html">Research</a> <!--items of navigation bar-->
+            </li>
+            <li class="list-item">
+                <a href="contact.html">Contact us</a> <!--items of navigation bar-->
+            </li>
+        </ul>
+    </nav>
+<div class="magic">
+    <form name="contact" onsubmit="return validform()" action="contact.html">  <!--on submit buttion this triggers the main.js file to compare the condtions-->
+        <div class="form_box">
+            <h1><center>Contact us</center></h1><br> 
+            <div class="input-row">
+                <input type="text" placeholder="Full Name*" name="name" maxlength="20"> <!--text field created with max length of 20-->
+                <span class="error">Please Enter Your Name</span>               <!--span class created for triggering of these when false condtion comes on js-->
+            </div>
+            <div class="input-row">
+                <input type="text" placeholder="Email Here*" name="email" maxlength="40"> <!--text feild created with max length 40-->
+                <span class="error">Please Enter Your Email</span> <!--span class created for triggering of these when false condtion comes on js-->
+            </div>
+            <div class="input-row">
+                <input type="text" placeholder="Your Phone number*" name="phone" maxlength="10">
+                <span class="error">Please Enter Your Phone number</span> <!--span class created for triggering of these when false condtion comes on js-->
+            </div>
+            <div class="input-row">
+                <select name="subject"> <!--drag down button for subject choosing-->
+                    <option value="">Subject*</option>
+                    <option value="cyber">Cybersecurity</option>
+                    <option value="web">Web Design</option>
+                    <option value="writing">Content Writing</option>
+                    <option value="digital">Digital Marketing</option>
+                </select>
+                <span class="error">Please select you Subject</span> <!--span class created for triggering of these when false condtion comes on js-->
+            </div>
+            <div class="input-row">
+                <textarea placeholder="your message here" name="message" maxlength="87"></textarea> <!--message field-->
+                <span class="error">This cannot be blank</span> <!--span class created for triggering of these when false condtion comes on js-->
+            </div>
+            <div class="input-row">
+                <label class="check_label" for="conditions">Please Accept All Terms And conditions</label> <!--checkbox-->
+                <input type="checkbox" name="conditions" id="conditions" >
+                <span class="error">Please Accept All Terms And conditions</span> <!--span class created for triggering of these when false condtion comes on js-->
+            </div>
+            <input type="submit" value="Submit"> <!--submit button-->
+        </div>
+
+    </form>
+</div>
+</body> 
+</html>
